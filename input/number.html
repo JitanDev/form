@@ -1,0 +1,39 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=10" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <style>
+        .number-only {
+        }
+
+            .number-only::-webkit-inner-spin-button,
+            .number-only::-webkit-outer-spin-button {
+                -webkit-appearance: none;
+                margin: 0;
+            }
+    </style>
+</head>
+<body>
+<input type="number" id="number" class="number-only" />
+<input type="number" id="number2" class="number-only" />
+<script>
+        //document.getElementById('number').addEventListener('keydown', function (e) {
+        //    if (e.which === 38 || e.which === 40) {
+        //        e.preventDefault();
+        //    }
+        //});
+        var number_only = document.getElementsByClassName('number-only');
+        Array.from(number_only).forEach(function (element) {
+            element.addEventListener('keydown', function (e) {
+                if (e.which === 38 || e.which === 40) {
+                    e.preventDefault();
+                }
+            });
+        });
+    </script>
+}
+</body>
+</html>
